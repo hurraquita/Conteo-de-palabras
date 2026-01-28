@@ -6,21 +6,33 @@
     <title>Contador De Palabras</title>
 
     <script>
-function Contar (){
-    let texto =document.getElementById("Texrto").value
-    let contador = texto.lenght
-    document =getElementById("contador")
+        function contar() {
+    let texto = document.getElementById("Texto").value;
+    let contador = texto.length;
+    document.getElementById("contador").textContent = contador;
+        }
 
-}
     </script>
     <style>
-#Texrto{
+        *{
+            background-color: rgb(31, 45, 58);
+            color: aliceblue;
+        }
+        body{
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+        }
+#Texto{
     resize: none;
+    background-color: rgb(58, 79, 99);
     width: 400px;
  height: 200px;
 }
 .card{
-    background: lightblue;
+    background: rgb(47, 66, 84);
 padding: 100px;
 border-radius: 12px;
 max-width: 600px;
@@ -35,8 +47,8 @@ border: 4px solid purple;
 </head>
 <h1>Contador de caracteres</h1>
 <body>
-    <textarea name="parrafo" id="Texrto"></textarea>
-    <p>total de caracteres incluidos con los espacios: <span></span></p>
+    <textarea id="Texto" placeholder="¡Escribe o pega aquí tu texto!" oninput="contar()"></textarea>
+    <p>total de caracteres incluidos con los espacios: <span id="contador">0</span></p>
 </body>
 </html>
 </main>
